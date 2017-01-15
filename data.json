@@ -1,6 +1,7 @@
 {
   "media_convert":{
     "search_folder":"folder1",
+    "convert_folder":"folder3",
     "out_folder":"folder2",
     "forks":"2",
     "audio_convert":"aac",
