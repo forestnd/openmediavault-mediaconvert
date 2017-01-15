@@ -1,0 +1,9 @@
+{
+  "media_convert":{
+    "search_folder":"folder1",
+    "out_folder":"folder2",
+    "forks":"2",
+    "audio_convert":"aac",
+    "video_convert":"h264"
+  }
+}
