@@ -20,8 +20,8 @@ for file in os.listdir(data['media_convert']['search_folder']):
         print("found: "+file)
 
 
-print "checking "+file+" to see if it needs converting"
-info = c.probe(data['media_convert']['search_folder']+"/"+file)
+print "checking "+str(file)+" to see if it needs converting"
+info = c.probe(str(data['media_convert']['search_folder']+"/"+file))
 
 video = info.video
 audio = info.audio
@@ -69,7 +69,7 @@ print ""
 print "~~~~~~~~~~~~~~~~~~~~~~Starting the convert~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
 
-conv = c.convert(data['media_convert']['search_folder']+"/"+file, data['media_convert']['out_folder']+"/"+file, {
+conv = c.convert(str(data['media_convert']['search_folder']+"/"+file), str(data['media_convert']['out_folder']+"/"+file), {
     'format': 'mkv',
     'audio': {
         'codec': conv_audio_codec,
@@ -87,5 +87,6 @@ conv = c.convert(data['media_convert']['search_folder']+"/"+file, data['media_co
 for timecode in conv:
     print "Converting (%f) ...\r" % timecode
 
-print "~~~~~~~~~~~~~~~~~~~~~~Removeing old file~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+print "~~~~~~~~~~~~~~~~~~~~~~Removeing non converted file~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+print "Deleteing: "+file+" from "+data['media_convert']['search_folder']
 os.remove(data['media_convert']['search_folder']+"/"+file)
