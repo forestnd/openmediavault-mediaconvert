@@ -36,7 +36,6 @@ print "audio codec: "+str(audio.codec)
 print "bitrate: "+str(audio.bitrate)
 print "Number of Channels: "+str(audio.audio_channels)
 
-
 print ""
 print "~~~~~~~~~~~~~~~~~~~~~~Checking what needs to be converted~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
@@ -86,6 +85,15 @@ conv = c.convert(str(data['media_convert']['search_folder']+"/"+file), str(data[
 
 for timecode in conv:
     print "Converting (%f) ...\r" % timecode
+
+
+
+print "~~~~~~~~~~~~~~~~~~~~~~Checking~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+print "checking "+str(file)+" to see if it needs converting"
+cinfo = c.probe(str(data['media_convert']['out_folder']+"/"+file))
+
+
+
 
 print "~~~~~~~~~~~~~~~~~~~~~~Removeing non converted file~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 print "Deleteing: "+file+" from "+data['media_convert']['search_folder']
