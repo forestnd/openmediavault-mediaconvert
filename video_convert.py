@@ -92,7 +92,7 @@ print "~~~~~~~~~~~~~~~~~~~~~~Checking~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 print "checking "+str(file)+" to see if it needs converting"
 cinfo = c.probe(str(data['media_convert']['out_folder']+"/"+file))
 
-
+print "will check if both videos lenths match"
 
 
 print "~~~~~~~~~~~~~~~~~~~~~~Removeing non converted file~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
