@@ -3,7 +3,7 @@
     "search_folder":"folder1",
     "convert_folder":"folder2",
     "out_folder":"folder3",
-    "forks":"2",
+    "forks":"9",
     "audio_convert":"aac",
     "video_convert":"h264"
   }
